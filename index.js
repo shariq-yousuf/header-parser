@@ -25,10 +25,10 @@ app.get("/api/hello", (req, res) => {
 app.get("/api/whoami", (req, res) => {
   res.json({
     ipaddress:
-      req.ip |
-      req.socket.remoteAddress |
-      req.headers["x-forwarded-for"] |
       req.headers["x-real-ip"] |
+      req.headers["x-forwarded-for"] |
+      req.socket.remoteAddress |
+      req.ip |
       "",
     language: req.headers["accept-language"],
     software: req.headers["user-agent"],
