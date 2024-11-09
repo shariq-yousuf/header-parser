@@ -24,12 +24,13 @@ app.get("/api/hello", (req, res) => {
 
 app.get("/api/whoami", (req, res) => {
   res.json({
-    ipaddress:
-      req.headers["x-real-ip"] |
-      req.headers["x-forwarded-for"] |
-      req.socket.remoteAddress |
+    ipaddress: String(
       req.ip |
-      "",
+        req.headers["x-real-ip"] |
+        req.headers["x-forwarded-for"] |
+        req.socket.remoteAddress |
+        ""
+    ),
     language: req.headers["accept-language"],
     software: req.headers["user-agent"],
   })
