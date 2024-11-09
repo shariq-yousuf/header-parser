@@ -1,8 +1,12 @@
 import dotenv from "dotenv"
 import express from "express"
+import path from "path"
+import { fileURLToPath } from "url"
 
 dotenv.config()
 const app = express()
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 import cors from "cors"
 app.use(cors({ optionsSuccessStatus: 200 })) // some legacy browsers choke on 204
@@ -11,7 +15,7 @@ app.use(express.static("public"))
 app.set("trust proxy", true)
 
 app.get("/", (req, res) => {
-  res.sendFile(import.meta.dirname + "/views/index.html")
+  res.sendFile(path.join(__dirname, "./views/index.html"))
 })
 
 app.get("/api/hello", (req, res) => {
