@@ -14,14 +14,20 @@
 
     <main class="container">
       <section class="description">
-        <p>description</p>
+        <p>
+          App that provides personalized information about the user, including
+          IP address, preferred language, and software, through a simple API
+          call to <code>/api/whoami</code>.
+        </p>
       </section>
 
       <section class="example-usage">
         <h2>Example Usage</h2>
         <ul>
           <li>
-            <a href="api/whoami"> http://localhost:3000/api/whoami </a>
+            <a href="api/whoami">
+              https://header-parser-fcc.up.railway.app/api/whoami
+            </a>
           </li>
         </ul>
       </section>
@@ -30,11 +36,11 @@
         <h2>Example Output</h2>
         <pre>
         <code>
-  {
-    "ipaddress":"::ffff:159.20.14.100",
-    "language":"en-US,en;q=0.5",
-    "software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
-  }
+{
+  "ipaddress":"::ffff:159.20.14.100",
+  "language":"en-US,en;q=0.5",
+  "software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"
+}
         </code>
         </pre>
       </section>

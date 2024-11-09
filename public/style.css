@@ -21,6 +21,17 @@ header {
   text-align: center;
 }
 
+.description {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+.description code {
+  background-color: rgba(187, 233, 194, 0.336);
+  padding: 0px 12px;
+  border-radius: 4px;
+}
+
 .container {
   max-width: 800px;
   margin: 20px auto;
@@ -46,13 +57,18 @@ section h2 {
 
 a {
   color: #007bff;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
 }
 
 pre {
   background-color: #f2f2f2;
   border-radius: 5px;
   overflow-x: scroll;
+  padding: 0 1rem;
 }
 
 footer {
@@ -60,6 +76,9 @@ footer {
   padding: 10px;
   background-color: #222;
   color: #fff;
+  position: absolute;
+  bottom: 0;
+	width: 100%;
 }
 
 footer a {
